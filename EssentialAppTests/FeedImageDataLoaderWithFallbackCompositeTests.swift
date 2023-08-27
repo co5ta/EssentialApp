@@ -118,18 +118,6 @@ final class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         action()
         wait(for: [exp], timeout: 1.0)
     }
-
-    private var anyData: Data {
-        return Data("any data".utf8)
-    }
-
-    private var anyURL: URL {
-        return URL(string: "http://any-url.com")!
-    }
-
-    private var anyNSError: NSError {
-        return NSError(domain: "any", code: 0)
-    }
 }
 
 private class LoaderSpy: FeedImageDataLoader {
