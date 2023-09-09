@@ -21,7 +21,7 @@ class FeedImageDataLoaderCacheDecorator: FeedImageDataLoader {
     }
 }
 
-class FeedImageDataLoaderCacheDecoratorTests: XCTestCase {
+class FeedImageDataLoaderCacheDecoratorTests: XCTestCase, FeedImageDataLoaderTestCase {
 
     func test_init_doesNotLoadImageData() {
         let (_, loader) = makeSUT()
