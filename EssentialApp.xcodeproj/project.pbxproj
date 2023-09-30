@@ -38,6 +38,7 @@
 		44B3A71B2ABBA48C00E559A8 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3A71A2ABBA48C00E559A8 /* FeedUIIntegrationTests.swift */; };
 		44B3A71D2ABBAE8300E559A8 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3A71C2ABBAE8200E559A8 /* FeedAcceptanceTests.swift */; };
 		44FE1D942ABF9871006254CA /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE1D932ABF9871006254CA /* UIView+TestHelpers.swift */; };
+		44FE1DDD2AC8E5CC006254CA /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE1DDC2AC8E5CC006254CA /* CombineHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		44B3A71A2ABBA48C00E559A8 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		44B3A71C2ABBAE8200E559A8 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		44FE1D932ABF9871006254CA /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		44FE1DDC2AC8E5CC006254CA /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				4449DDAB2A93B6E3005A9D2E /* AppDelegate.swift */,
 				4449DDAD2A93B6E3005A9D2E /* SceneDelegate.swift */,
 				4449DDAF2A93B6E3005A9D2E /* ViewController.swift */,
+				44FE1DDC2AC8E5CC006254CA /* CombineHelpers.swift */,
 				4449DDB42A93B6E4005A9D2E /* Assets.xcassets */,
 				4449DDB62A93B6E4005A9D2E /* LaunchScreen.storyboard */,
 				4449DDB92A93B6E4005A9D2E /* Info.plist */,
@@ -303,6 +306,7 @@
 			files = (
 				4449DDB02A93B6E3005A9D2E /* ViewController.swift in Sources */,
 				4449DDAC2A93B6E3005A9D2E /* AppDelegate.swift in Sources */,
+				44FE1DDD2AC8E5CC006254CA /* CombineHelpers.swift in Sources */,
 				44B3A7022ABBA3C600E559A8 /* FeedLoaderPresentationAdapter.swift in Sources */,
 				44B3A7072ABBA3C600E559A8 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				44B3A7062ABBA3C600E559A8 /* FeedViewAdapter.swift in Sources */,
