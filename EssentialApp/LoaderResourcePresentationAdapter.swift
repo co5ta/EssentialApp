@@ -10,7 +10,7 @@ import EssentialFeed
 import EssentialFeediOS
 
 final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
-    private let loader: () -> AnyPublisher<Resource, Error>
+    private let loader: (() -> AnyPublisher<Resource, Error>)?
     private var cancellable: Cancellable?
     var presenter: LoadResourcePresenter<Resource, View>?
 
@@ -21,7 +21,7 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
     func loadResource() {
         presenter?.didStartLoading()
 
-        cancellable = loader()
+        cancellable = loader?()
             .dispatchOnMainQueue()
             .sink(
                 receiveCompletion: { [weak self] completion in
