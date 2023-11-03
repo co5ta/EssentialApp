@@ -65,11 +65,13 @@ final class FeedAcceptanceTests: XCTestCase {
         store: InMemoryFeedStore = .empty
     ) -> ListViewController {
         let sut = SceneDelegate(httpClient: httpClient, store: store)
-        sut.window = UIWindow()
+        sut.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 1))
         sut.configureWindow()
 
         let nav = sut.window?.rootViewController as? UINavigationController
-        return nav?.topViewController as! ListViewController
+        let vc = nav?.topViewController as! ListViewController
+        vc.simulateAppearance()
+        return vc
     }
 
     private func enterBackground(with store: InMemoryFeedStore) {
