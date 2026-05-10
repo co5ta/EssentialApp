@@ -13,7 +13,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
         expect(sut, toRetrieve: .success(nil), file: file, line: line)
     }
 
-    func assertThatRetrieveHasNoSideEffectOnEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
+    func assertThatRetrieveHasNoSideEffectsOnEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
         expect(sut, toRetrieveTwice: .success(nil), file: file, line: line)
     }
 
@@ -26,7 +26,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
         expect(sut, toRetrieve: .success((CachedFeed(feed: feed, timestamp: timestamp))), file: file, line: line)
     }
 
-    func assertThatRetrieveHasNoSideEffectOnNonEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
+    func assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
         let feed = uniqueImageFeed().local
         let timestamp = Date()
 
@@ -49,7 +49,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
         XCTAssertNil(insertionError, "Expected to override cache successfully", file: file, line: line)
     }
     
-    func assertThatInsertDeliversOverridesPreviouslyInsertedCacheValues(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
+    func assertThatInsertOverridesPreviouslyInsertedCacheValues(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
         insert((uniqueImageFeed().local, Date()), to: sut)
 
         let latestFeed = uniqueImageFeed().local
@@ -65,7 +65,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
         XCTAssertNil(deletionError, "Expected empty cache deletion to succeed", file: file, line: line)
     }
     
-    func assertThatDeleteHasNoSideEffectOnEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
+    func assertThatDeleteHasNoSideEffectsOnEmptyCache(on sut: FeedStore, file: StaticString = #file, line: UInt = #line) {
         deleteCache(from: sut)
 
         expect(sut, toRetrieve: .success(nil), file: file, line: line)
